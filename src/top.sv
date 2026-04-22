@@ -52,14 +52,14 @@ pwm right(
 wire sm_clock;
 logic [3:0] passDisplay; 
 logic [3:0] duty_cycle_1; 
-logic [3:0] duty_cycle_2; 
+logic [3:0] duty_cycle_2 ; 
 
 always @(*) begin
     if (seg_display) begin
-        passDisplay <= duty_cycle_2;
+        passDisplay = duty_cycle_2;
         seg7[7] = 1'b0;
     end else begin
-        passDisplay <= duty_cycle_1;
+        passDisplay = duty_cycle_1;
         seg7[7] = 1'b1;
     end
 end
